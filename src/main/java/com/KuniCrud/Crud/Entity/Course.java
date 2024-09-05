@@ -20,33 +20,54 @@ public class Course {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	@Column(name ="empName")
-	private String EmployeeName;
+	private String employeeName;
 	@Column
-	private Double Salary;
+	private Double salary;
 	@Column
-	private String Designation;
-	@Column(name ="emp_Type ")
-	private String EmployementType;
-	public void setName(String name2) {
-		// TODO Auto-generated method stub
-		this.EmployeeName = name2;
-		
-	}
-	public void setPrice(double price2) {
-		// TODO Auto-generated method stub
-		this.Salary= price2;
-		
-	}
-	public void setDesignation(String designation2) {
-		// TODO Auto-generated method stub
-		this.Designation= designation2;
-		
-	}
-	public void setEmployementType(String employementType2) {
-		// TODO Auto-generated method stub
-		this.EmployeeName = employementType2;
-		
+	private String designation;
+	@Column(name ="emp_Type")
+	private String employementType;
+
+
+	
+	
+	public Integer getId() {
+		return id;
 	}
 
+	public String getEmployeeName() {
+		return employeeName;
+	}
+
+	public Double getSalary() {
+		return salary;
+	}
+
+	public String getDesignation() {
+		return designation;
+	}
+
+	public String getEmployementType() {
+		return employementType;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+	public void setEmployementType(String employementType) {
+		this.employementType = employementType;
+	}
+	
 }

@@ -20,9 +20,9 @@ public class CourseServiceImpl implements CourseService {
 	public String upsert(CourseRequestBody courseRequestBody) {
 		
 		Course course = new Course();
-		course.setName(courseRequestBody.getEmployeeName());
+		course.setEmployeeName(courseRequestBody.getEmployeeName());
 		course.setEmployementType(courseRequestBody.getEmployementType());
-		course.setPrice(courseRequestBody.getSalary());
+		course.setSalary(courseRequestBody.getSalary());
 		course.setDesignation(courseRequestBody.getDesignation());
 		courseRepo.save(course);
 		return "success";
@@ -30,7 +30,7 @@ public class CourseServiceImpl implements CourseService {
 
 	@Override
 	public Course getById(Integer id) {
-		
+			
 		Optional<Course> findById = courseRepo.findById(id);
 		if(findById.isPresent()) {
 			return findById.get();
@@ -43,7 +43,7 @@ public class CourseServiceImpl implements CourseService {
 		// TODO Auto-generated method stub
 		return courseRepo.findAll();
 	}
-
+	
 	@Override
 	public String deleteById(Integer id) {
 		// TODO Auto-generated method stub

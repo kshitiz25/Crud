@@ -8,25 +8,24 @@ import lombok.Setter;
 @Setter
 public class CourseRequestBody {
 
-	String EmployeeName;
-	double Salary;
-	String Designation;
-	String EmployementType;
+	
+	String employeeName;
+	double salary;
+	String designation;
+	String employementType;
+
 
 	public String getEmployeeName() {
-		return EmployeeName;
+		return employeeName;
 	}
-
-	public double getSalary() {
-		return Salary;
+	public Double getSalary() {
+		return salary;
 	}
-
 	public String getDesignation() {
-		return Designation;
+		return designation;
 	}
-
 	public String getEmployementType() {
-		return EmployementType;
+		return employementType;
 	}
 
 }
